@@ -51,10 +51,10 @@ export function HomeSection2() {
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <motion.div variants={section2ItemVariants}>
             <div className="mb-6 inline-flex rounded-full border border-[#00B583]/35 bg-[#00B583]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-[#00B583]">
-              Section 2
+              WHAT WE DO
             </div>
             <h2 className="max-w-3xl text-4xl font-extrabold leading-[1.02] tracking-[-0.045em] text-white md:text-6xl">
-              Infrastructure pillars for institutional tokenization.
+              One company. Four pillars of value.
             </h2>
           </motion.div>
 
@@ -62,7 +62,7 @@ export function HomeSection2() {
             variants={section2ItemVariants}
             className="max-w-2xl text-base leading-8 text-white/58 md:text-lg lg:justify-self-end"
           >
-            A premium operating layer for launching, controlling, and reporting real-world asset token programs with compliance, custody, governance, and AI intelligence built into the flow.
+           FirstData transforms how real-world assets are owned, traded and managed — combining deep AI expertise with regulated digital-asset infrastructure to move global investment into the Kingdom and beyond.
           </motion.p>
         </div>
 
