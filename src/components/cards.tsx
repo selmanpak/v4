@@ -31,3 +31,36 @@ export function ProblemCard({ icon, title, text }: { icon: React.ReactNode; titl
     </div>
   );
 }
+
+export function FlowRailStep({
+  number,
+  label,
+  title,
+  text,
+  highlighted = false,
+}: {
+  number: string;
+  label: string;
+  title: string;
+  text: string;
+  highlighted?: boolean;
+}) {
+  return (
+    <div
+      className={`relative rounded-[2rem] border p-5 transition ${
+        highlighted
+          ? 'border-[#00B583]/50 bg-[#00B583]/12 shadow-2xl shadow-[#00B583]/10'
+          : 'border-white/10 bg-black/35 hover:border-[#00B583]/35'
+      }`}
+    >
+      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border border-[#00B583]/35 bg-black text-sm font-extrabold text-[#00B583]">
+        {number}
+      </div>
+      <div className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#00B583]/80">
+        {label}
+      </div>
+      <h3 className="mt-3 text-lg font-extrabold text-white">{title}</h3>
+      <p className="mt-4 text-sm leading-7 text-white/55">{text}</p>
+    </div>
+  );
+}
