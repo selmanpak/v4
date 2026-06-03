@@ -15,7 +15,7 @@ const statusSteps = ['Asset Verified', 'Token Ready', 'Access Controlled'];
 
 export function HomeHeroSection() {
   return (
-    <section className="home-hero-motion relative mx-auto grid max-w-7xl items-center gap-12 overflow-hidden px-5 pb-24 pt-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pt-28">
+    <section className="home-hero-motion relative mx-auto grid max-w-7xl items-center gap-12 overflow-hidden px-5 pb-24 pt-20 lg:grid-cols-[60fr_40fr] lg:px-8 lg:pt-28">
       <HeroAmbientLayer />
 
       <motion.div
