@@ -30,9 +30,11 @@ const capabilities = [
 
 export function HomeSection2() {
   return (
-    <section className="relative overflow-hidden border-y border-white/10 bg-[#001A13]">
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-[#00B583]/10 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#00B583]/10 blur-3xl" />
+    <section className="relative overflow-hidden border-y border-white/10 bg-[#050807]">
+      <div className="pointer-events-none absolute -right-52 -top-28 h-[500px] w-[800px] rounded-full bg-[radial-gradient(ellipse,rgba(0,181,131,0.18),transparent_65%)] blur-[90px]" />
+      <div className="pointer-events-none absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.07)_1px,transparent_1px)] [background-size:50px_50px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(0,181,131,0.12),transparent_65%)]" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00B583]/40 to-transparent" />
 
       <motion.div
         className="relative mx-auto max-w-7xl px-5 py-20 lg:px-8"
@@ -74,7 +76,7 @@ export function HomeSection2() {
             return (
               <motion.article
                 key={capability.title}
-                className="group relative min-h-[310px] overflow-hidden rounded-[2.25rem] border border-white/10 bg-black/35 p-6 shadow-2xl shadow-black/20 backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#00B583]/50 hover:bg-[#00291D]/45"
+                className="group relative min-h-[310px] overflow-hidden rounded-[2.25rem] border border-white/10 bg-[rgba(8,22,17,0.74)] p-6 shadow-2xl shadow-black/30 backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#00B583]/50 hover:bg-[#00291D]/45"
                 variants={cardVariants}
                 whileHover={{ y: -6 }}
               >
