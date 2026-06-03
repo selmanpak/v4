@@ -18,7 +18,17 @@ export function HomeHeroSection() {
     <section className="home-hero-motion relative mx-auto grid max-w-7xl items-center gap-12 overflow-hidden px-5 pb-24 pt-20 lg:grid-cols-[60fr_40fr] lg:px-8 lg:pt-28">
       <HeroAmbientLayer />
 
-      <div className="relative z-10">
+      <motion.div
+        className="relative z-10"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: { staggerChildren: 0.1, delayChildren: 0.08 },
+          },
+        }}
+      >
         <motion.div
           variants={heroItemVariants}
           className="mb-7 inline-flex rounded-full border border-[#00B583]/40 bg-[#00B583]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-[#00B583]"
@@ -83,7 +93,7 @@ export function HomeHeroSection() {
           />
           Discover the platform
         </motion.div>
-      </div>
+      </motion.div>
 
       <HeroVisual />
     </section>
