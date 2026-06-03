@@ -1,30 +1,30 @@
 import { motion } from 'framer-motion';
-import { BrainCircuit, Landmark, ShieldCheck, Workflow } from 'lucide-react';
+import { BrainCircuit, Coins, Handshake, Network } from 'lucide-react';
 
 const capabilities = [
   {
     label: '01',
     title: 'Digital Assets',
     text: 'Compliant issuance and distribution of fractionalized real-world asset tokens, end to end.',
-    icon: Landmark,
+    icon: Coins,
   },
   {
     label: '02',
     title: 'Artificial Intelligence',
     text: 'Proprietary AI applications and AI-enabled advisory that sharpen structuring, diligence and insight.',
-    icon: ShieldCheck,
+    icon: BrainCircuit,
   },
   {
     label: '03',
     title: 'Infrastructure & Platforms',
     text: 'Scalable, vendor-agnostic, institutional-grade infrastructure built for regulated environments.',
-    icon: Workflow,
+    icon: Network,
   },
   {
     label: '04',
     title: 'Advisory',
     text: 'Strategic guidance that helps issuers and investors navigate tokenization with confidence.',
-    icon: BrainCircuit,
+    icon: Handshake,
   },
 ];
 
@@ -48,21 +48,21 @@ export function HomeSection2() {
           },
         }}
       >
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-          <motion.div variants={section2ItemVariants}>
+        <div className="grid place-items-center gap-6 text-center">
+          <motion.div variants={section2ItemVariants} className="grid place-items-center">
             <div className="mb-6 inline-flex rounded-full border border-[#00B583]/35 bg-[#00B583]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-[#00B583]">
               WHAT WE DO
             </div>
-            <h2 className="max-w-3xl text-4xl font-extrabold leading-[1.02] tracking-[-0.045em] text-white md:text-6xl">
+            <h2 className="mx-auto max-w-3xl text-4xl font-extrabold leading-[1.02] tracking-[-0.045em] text-white md:text-6xl">
               One company. Four pillars of value.
             </h2>
           </motion.div>
 
           <motion.p
             variants={section2ItemVariants}
-            className="max-w-2xl text-base leading-8 text-white/58 md:text-lg lg:justify-self-end"
+            className="mx-auto max-w-3xl text-base leading-8 text-white/58 md:text-lg"
           >
-           FirstData transforms how real-world assets are owned, traded and managed — combining deep AI expertise with regulated digital-asset infrastructure to move global investment into the Kingdom and beyond.
+            FirstData transforms how real-world assets are owned, traded and managed — combining deep AI expertise with regulated digital-asset infrastructure to move global investment into the Kingdom and beyond.
           </motion.p>
         </div>
 
