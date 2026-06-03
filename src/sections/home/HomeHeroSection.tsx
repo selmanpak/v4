@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { primaryButtonClass } from '../../config';
 import { HeroVisual } from '../../components/HeroVisual';
 import { ProofItem } from '../../components/cards';
@@ -10,8 +10,6 @@ const heroLines = [
   'for real-world asset',
   'tokenization.',
 ];
-
-const statusSteps = ['Asset Verified', 'Token Ready', 'Access Controlled'];
 
 export function HomeHeroSection() {
   return (
@@ -67,10 +65,6 @@ export function HomeHeroSection() {
           >
             Explore the Platform
           </Link>
-        </motion.div>
-
-        <motion.div variants={heroItemVariants}>
-          <HeroStatusStrip />
         </motion.div>
 
         <motion.div
@@ -142,47 +136,6 @@ function HeroAmbientLayer() {
         animate={{ opacity: [0.25, 0.7, 0.25], scaleX: [0.65, 1, 0.65] }}
         transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
       />
-    </div>
-  );
-}
-
-function HeroStatusStrip() {
-  return (
-    <div className="mt-8 overflow-hidden rounded-[1.8rem] border border-[#00B583]/20 bg-black/35 p-3 backdrop-blur-xl sm:max-w-2xl">
-      <div className="grid gap-2 sm:grid-cols-3">
-        {statusSteps.map((step, index) => (
-          <motion.div
-            key={step}
-            className="flex items-center gap-3 rounded-[1.25rem] border border-white/10 bg-[#00291D]/35 px-4 py-3"
-            animate={{
-              borderColor: ['rgba(255,255,255,0.10)', 'rgba(0,181,131,0.45)', 'rgba(255,255,255,0.10)'],
-              backgroundColor: ['rgba(0,41,29,0.35)', 'rgba(0,181,131,0.11)', 'rgba(0,41,29,0.35)'],
-            }}
-            transition={{
-              duration: 2.4,
-              delay: index * 0.45,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          >
-            <motion.div
-              className="flex h-7 w-7 items-center justify-center rounded-full bg-[#00B583]/15 text-[#00B583]"
-              animate={{ scale: [1, 1.12, 1], opacity: [0.65, 1, 0.65] }}
-              transition={{
-                duration: 2.4,
-                delay: index * 0.45,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            >
-              <CheckCircle2 size={16} />
-            </motion.div>
-            <span className="text-xs font-extrabold uppercase tracking-[0.14em] text-white/75">
-              {step}
-            </span>
-          </motion.div>
-        ))}
-      </div>
     </div>
   );
 }
