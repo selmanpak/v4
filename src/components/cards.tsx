@@ -1,3 +1,4 @@
+import type React from 'react';
 import { CheckCircle2 } from 'lucide-react';
 
 export function ProofItem({ text }: { text: string }) {
@@ -15,6 +16,18 @@ export function Pillar({ title, text }: { title: string; text: string }) {
       <div className="mb-5 h-1 w-12 rounded-full bg-[#00B583]" />
       <h3 className="text-lg font-bold text-white">{title}</h3>
       <p className="mt-4 text-sm leading-7 text-white/58">{text}</p>
+    </div>
+  );
+}
+
+export function ProblemCard({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
+  return (
+    <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 transition hover:border-[#00B583]/40 hover:bg-[#00291D]/25">
+      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#00B583]/12 text-[#00B583]">
+        {icon}
+      </div>
+      <h3 className="text-lg font-bold text-white">{title}</h3>
+      <p className="mt-4 text-sm leading-7 text-white/55">{text}</p>
     </div>
   );
 }
