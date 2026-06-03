@@ -7,24 +7,52 @@ const capabilities = [
     title: 'Digital Assets',
     text: 'Compliant issuance and distribution of fractionalized real-world asset tokens, end to end.',
     icon: Coins,
+    gradientMotion: {
+      x: ['-18%', '24%', '-6%', '18%', '-18%'],
+      y: ['-22%', '14%', '26%', '-10%', '-22%'],
+      rotate: [0, 18, -10, 14, 0],
+      scale: [1, 1.16, 0.96, 1.12, 1],
+    },
+    duration: 8.4,
   },
   {
     label: '02',
     title: 'Artificial Intelligence',
     text: 'Proprietary AI applications and AI-enabled advisory that sharpen structuring, diligence and insight.',
     icon: BrainCircuit,
+    gradientMotion: {
+      x: ['22%', '-12%', '16%', '-24%', '22%'],
+      y: ['18%', '-20%', '10%', '24%', '18%'],
+      rotate: [10, -16, 20, -8, 10],
+      scale: [1.08, 0.95, 1.18, 1, 1.08],
+    },
+    duration: 9.7,
   },
   {
     label: '03',
     title: 'Infrastructure & Platforms',
     text: 'Scalable, vendor-agnostic, institutional-grade infrastructure built for regulated environments.',
     icon: Network,
+    gradientMotion: {
+      x: ['8%', '28%', '-20%', '10%', '8%'],
+      y: ['-26%', '18%', '12%', '-18%', '-26%'],
+      rotate: [-8, 12, -18, 16, -8],
+      scale: [0.98, 1.14, 1.02, 0.94, 0.98],
+    },
+    duration: 10.3,
   },
   {
     label: '04',
     title: 'Advisory',
     text: 'Strategic guidance that helps issuers and investors navigate tokenization with confidence.',
     icon: Handshake,
+    gradientMotion: {
+      x: ['-24%', '6%', '28%', '-10%', '-24%'],
+      y: ['20%', '-24%', '4%', '26%', '20%'],
+      rotate: [14, -12, 8, -20, 14],
+      scale: [1.04, 1.2, 0.96, 1.1, 1.04],
+    },
+    duration: 8.9,
   },
 ];
 
@@ -80,6 +108,35 @@ export function HomeSection2() {
                 variants={cardVariants}
                 whileHover={{ y: -6 }}
               >
+                <motion.div
+                  className="pointer-events-none absolute -inset-16 opacity-70 blur-2xl"
+                  style={{
+                    background:
+                      'radial-gradient(circle at 35% 35%, rgba(0,181,131,0.34), transparent 34%), radial-gradient(circle at 72% 68%, rgba(22,227,166,0.16), transparent 32%), linear-gradient(135deg, rgba(0,41,29,0.78), rgba(0,181,131,0.08), rgba(5,8,7,0.78))',
+                  }}
+                  animate={capability.gradientMotion}
+                  transition={{
+                    duration: capability.duration,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                />
+                <motion.div
+                  className="pointer-events-none absolute inset-0 opacity-40"
+                  style={{
+                    background:
+                      'linear-gradient(115deg, transparent 0%, rgba(0,181,131,0.18) 38%, transparent 72%)',
+                  }}
+                  animate={{
+                    x: index % 2 === 0 ? ['-90%', '90%', '-90%'] : ['90%', '-90%', '90%'],
+                    opacity: [0.14, 0.5, 0.14],
+                  }}
+                  transition={{
+                    duration: capability.duration + 2.4,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                />
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00B583]/60 to-transparent opacity-0 transition group-hover:opacity-100" />
                 <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-[#00B583]/10 blur-2xl transition group-hover:bg-[#00B583]/20" />
 
