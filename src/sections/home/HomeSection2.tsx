@@ -76,24 +76,16 @@ export function HomeSection2() {
             return (
               <motion.article
                 key={capability.title}
-                className="group relative min-h-[310px] overflow-hidden rounded-[2.25rem] border border-white/10 bg-[rgba(8,22,17,0.74)] p-6 shadow-2xl shadow-black/30 backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#00B583]/50 hover:bg-[#00291D]/45"
+                className="group relative flex min-h-[310px] flex-col items-center justify-center overflow-hidden rounded-[2.25rem] border border-white/10 bg-[rgba(8,22,17,0.74)] p-6 text-center shadow-2xl shadow-black/30 backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#00B583]/50 hover:bg-[#00291D]/45"
                 variants={cardVariants}
                 whileHover={{ y: -6 }}
               >
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00B583]/60 to-transparent opacity-0 transition group-hover:opacity-100" />
                 <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-[#00B583]/10 blur-2xl transition group-hover:bg-[#00B583]/20" />
-                <div className="absolute bottom-5 right-5 text-8xl font-black leading-none text-white/[0.035]">
-                  {capability.label}
-                </div>
 
-                <div className="relative z-10">
-                  <div className="mb-8 flex items-center justify-between">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#00B583]/25 bg-[#00B583]/10 text-[#00B583] shadow-lg shadow-[#00B583]/10">
-                      <Icon size={25} />
-                    </div>
-                    <div className="text-xs font-extrabold tracking-[0.24em] text-white/25">
-                      {capability.label}
-                    </div>
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#00B583]/25 bg-[#00B583]/10 text-[#00B583] shadow-lg shadow-[#00B583]/10">
+                    <Icon size={25} />
                   </div>
 
                   <h3 className="text-xl font-extrabold tracking-[-0.03em] text-white">
@@ -102,11 +94,6 @@ export function HomeSection2() {
                   <p className="mt-5 text-sm leading-7 text-white/55">
                     {capability.text}
                   </p>
-
-                  <div className="mt-8 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#00B583]/80">
-                    <span className="h-px w-8 bg-[#00B583]/70" />
-                    Core pillar
-                  </div>
                 </div>
 
                 {index < capabilities.length - 1 && (
