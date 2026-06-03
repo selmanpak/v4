@@ -1,6 +1,7 @@
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { HomeHeroSection } from './sections/home/HomeHeroSection';
+import { HomeSection2 } from './sections/home/HomeSection2';
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
       <Header />
       <main>
         <HomeHeroSection />
+        <HomeSection2 />
       </main>
       <Footer />
     </div>
