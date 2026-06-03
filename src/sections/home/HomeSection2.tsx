@@ -4,26 +4,26 @@ import { BrainCircuit, Landmark, ShieldCheck, Workflow } from 'lucide-react';
 const capabilities = [
   {
     label: '01',
-    title: 'Tokenization Infrastructure',
-    text: 'Issue and manage real-world asset tokens through controlled, auditable workflows.',
+    title: 'Digital Assets',
+    text: 'Compliant issuance and distribution of fractionalized real-world asset tokens, end to end.',
     icon: Landmark,
   },
   {
     label: '02',
-    title: 'Compliance Operations',
-    text: 'Support KYC, eligibility, disclosures, roles, approvals, and regulatory reporting.',
+    title: 'Artificial Intelligence',
+    text: 'Proprietary AI applications and AI-enabled advisory that sharpen structuring, diligence and insight.',
     icon: ShieldCheck,
   },
   {
     label: '03',
-    title: 'Custody & Governance',
-    text: 'Maintain traceable links between assets, custody models, wallets, and token lifecycle.',
+    title: 'Infrastructure & Platforms',
+    text: 'Scalable, vendor-agnostic, institutional-grade infrastructure built for regulated environments.',
     icon: Workflow,
   },
   {
     label: '04',
-    title: 'AI-Enhanced Intelligence',
-    text: 'Use AI-enabled workflows to support review, reporting, insight, and advisory processes.',
+    title: 'Advisory',
+    text: 'Strategic guidance that helps issuers and investors navigate tokenization with confidence.',
     icon: BrainCircuit,
   },
 ];
