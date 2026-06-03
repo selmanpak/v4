@@ -7,52 +7,48 @@ const capabilities = [
     title: 'Digital Assets',
     text: 'Compliant issuance and distribution of fractionalized real-world asset tokens, end to end.',
     icon: Coins,
-    gradientMotion: {
-      x: ['-18%', '24%', '-6%', '18%', '-18%'],
-      y: ['-22%', '14%', '26%', '-10%', '-22%'],
-      rotate: [0, 18, -10, 14, 0],
-      scale: [1, 1.16, 0.96, 1.12, 1],
+    glowMotion: {
+      x: ['34%', '-12%', '18%', '46%', '34%'],
+      y: ['-30%', '8%', '42%', '-6%', '-30%'],
+      scale: [1, 1.16, 0.96, 1.08, 1],
     },
-    duration: 8.4,
+    duration: 16.8,
   },
   {
     label: '02',
     title: 'Artificial Intelligence',
     text: 'Proprietary AI applications and AI-enabled advisory that sharpen structuring, diligence and insight.',
     icon: BrainCircuit,
-    gradientMotion: {
-      x: ['22%', '-12%', '16%', '-24%', '22%'],
-      y: ['18%', '-20%', '10%', '24%', '18%'],
-      rotate: [10, -16, 20, -8, 10],
-      scale: [1.08, 0.95, 1.18, 1, 1.08],
+    glowMotion: {
+      x: ['42%', '6%', '-18%', '30%', '42%'],
+      y: ['-24%', '36%', '12%', '-16%', '-24%'],
+      scale: [1.08, 0.96, 1.18, 1, 1.08],
     },
-    duration: 9.7,
+    duration: 19.4,
   },
   {
     label: '03',
     title: 'Infrastructure & Platforms',
     text: 'Scalable, vendor-agnostic, institutional-grade infrastructure built for regulated environments.',
     icon: Network,
-    gradientMotion: {
-      x: ['8%', '28%', '-20%', '10%', '8%'],
-      y: ['-26%', '18%', '12%', '-18%', '-26%'],
-      rotate: [-8, 12, -18, 16, -8],
-      scale: [0.98, 1.14, 1.02, 0.94, 0.98],
+    glowMotion: {
+      x: ['28%', '52%', '-14%', '20%', '28%'],
+      y: ['-34%', '18%', '32%', '-12%', '-34%'],
+      scale: [0.98, 1.12, 1.02, 0.94, 0.98],
     },
-    duration: 10.3,
+    duration: 20.6,
   },
   {
     label: '04',
     title: 'Advisory',
     text: 'Strategic guidance that helps issuers and investors navigate tokenization with confidence.',
     icon: Handshake,
-    gradientMotion: {
-      x: ['-24%', '6%', '28%', '-10%', '-24%'],
-      y: ['20%', '-24%', '4%', '26%', '20%'],
-      rotate: [14, -12, 8, -20, 14],
-      scale: [1.04, 1.2, 0.96, 1.1, 1.04],
+    glowMotion: {
+      x: ['46%', '10%', '34%', '-16%', '46%'],
+      y: ['-28%', '22%', '-10%', '38%', '-28%'],
+      scale: [1.04, 1.18, 0.96, 1.1, 1.04],
     },
-    duration: 8.9,
+    duration: 17.8,
   },
 ];
 
@@ -109,12 +105,8 @@ export function HomeSection2() {
                 whileHover={{ y: -6 }}
               >
                 <motion.div
-                  className="pointer-events-none absolute -inset-16 opacity-70 blur-2xl"
-                  style={{
-                    background:
-                      'radial-gradient(circle at 35% 35%, rgba(0,181,131,0.34), transparent 34%), radial-gradient(circle at 72% 68%, rgba(22,227,166,0.16), transparent 32%), linear-gradient(135deg, rgba(0,41,29,0.78), rgba(0,181,131,0.08), rgba(5,8,7,0.78))',
-                  }}
-                  animate={capability.gradientMotion}
+                  className="pointer-events-none absolute h-40 w-40 rounded-full bg-[#00B583]/18 blur-2xl"
+                  animate={capability.glowMotion}
                   transition={{
                     duration: capability.duration,
                     repeat: Infinity,
@@ -122,23 +114,19 @@ export function HomeSection2() {
                   }}
                 />
                 <motion.div
-                  className="pointer-events-none absolute inset-0 opacity-40"
-                  style={{
-                    background:
-                      'linear-gradient(115deg, transparent 0%, rgba(0,181,131,0.18) 38%, transparent 72%)',
-                  }}
+                  className="pointer-events-none absolute h-24 w-24 rounded-full bg-[#16E3A6]/10 blur-xl"
                   animate={{
-                    x: index % 2 === 0 ? ['-90%', '90%', '-90%'] : ['90%', '-90%', '90%'],
-                    opacity: [0.14, 0.5, 0.14],
+                    x: capability.glowMotion.x.slice().reverse(),
+                    y: capability.glowMotion.y.slice().reverse(),
+                    scale: capability.glowMotion.scale.slice().reverse(),
                   }}
                   transition={{
-                    duration: capability.duration + 2.4,
+                    duration: capability.duration + 4,
                     repeat: Infinity,
                     ease: 'easeInOut',
                   }}
                 />
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00B583]/60 to-transparent opacity-0 transition group-hover:opacity-100" />
-                <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-[#00B583]/10 blur-2xl transition group-hover:bg-[#00B583]/20" />
 
                 <div className="relative z-10 flex flex-col items-center">
                   <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#00B583]/25 bg-[#00B583]/10 text-[#00B583] shadow-lg shadow-[#00B583]/10">
