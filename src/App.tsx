@@ -4,7 +4,7 @@ import { HomeHeroSection } from './sections/home/HomeHeroSection';
 
 export default function App() {
   return (
-    <div className="app-shell">
+    <div className="min-h-screen bg-black text-white">
       <Header />
       <main>
         <HomeHeroSection />
