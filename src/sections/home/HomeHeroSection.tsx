@@ -5,12 +5,6 @@ import { primaryButtonClass } from '../../config';
 import { HeroVisual } from '../../components/HeroVisual';
 import { ProofItem } from '../../components/cards';
 
-const heroLines = [
-  'Institutional infrastructure',
-  'for real-world asset',
-  'tokenization.',
-];
-
 export function HomeHeroSection() {
   return (
     <section className="home-hero-motion relative mx-auto grid max-w-7xl items-center gap-12 overflow-hidden px-5 pb-24 pt-20 lg:grid-cols-[60fr_40fr] lg:px-8 lg:pt-28">
@@ -35,20 +29,19 @@ export function HomeHeroSection() {
         </motion.div>
 
         <h1 className="max-w-4xl text-5xl font-extrabold leading-[0.98] tracking-[-0.055em] text-white md:text-7xl">
-          {heroLines.map((line) => (
-            <motion.span key={line} variants={heroLineVariants} className="block">
-              {line}
-            </motion.span>
-          ))}
+          <motion.span variants={heroLineVariants} className="block">
+            The future of asset
+          </motion.span>
+          <motion.span variants={heroLineVariants} className="block">
+            ownership, <span className="text-[#00B583]">tokenized.</span>
+          </motion.span>
         </h1>
 
         <motion.p
           variants={heroItemVariants}
           className="mt-7 max-w-2xl text-base leading-8 text-white/62 md:text-lg"
         >
-          FirstData enables regulated tokenization, distribution, custody-aware
-          workflows, and lifecycle reporting for real-world assets — engineered
-          for Saudi Arabia and scalable across markets.
+          FirstData builds regulated, institutional-grade infrastructure for tokenizing real-world assets — powered by AI. We unlock liquidity, transparency and access to premium asset classes, starting with Saudi real estate and aligned with Vision 2030.
         </motion.p>
 
         <motion.div
