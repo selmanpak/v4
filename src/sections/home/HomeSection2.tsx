@@ -105,7 +105,7 @@ export function HomeSection2() {
                 whileHover={{ y: -6 }}
               >
                 <motion.div
-                  className="pointer-events-none absolute h-40 w-40 rounded-full bg-[#00B583]/65 blur-2xl"
+                  className="pointer-events-none absolute h-40 w-40 rounded-full bg-[#00B583]/9 blur-2xl"
                   animate={capability.glowMotion}
                   transition={{
                     duration: capability.duration,
@@ -114,7 +114,7 @@ export function HomeSection2() {
                   }}
                 />
                 <motion.div
-                  className="pointer-events-none absolute h-24 w-24 rounded-full bg-[#16E3A6]/65 blur-xl"
+                  className="pointer-events-none absolute h-24 w-24 rounded-full bg-[#16E3A6]/5 blur-xl"
                   animate={{
                     x: capability.glowMotion.x.slice().reverse(),
                     y: capability.glowMotion.y.slice().reverse(),
